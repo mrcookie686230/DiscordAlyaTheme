@@ -103,6 +103,6 @@ If it doesn't appear immediately, try **Reload Themes** or restart Discord.
 
 # Light Mode 
 <img width="1278" height="726" alt="Screenshot_20261003_204737" src="https://github.com/user-attachments/assets/5a85306b-b521-473a-acc8-c644deeb5f48" />
-----------------------------
+
 # Dark Mode
 <img width="1278" height="728" alt="Screenshot_20261003_204626-1" src="https://github.com/user-attachments/assets/b56f9ff7-e086-4832-8b7f-faf185b58a7b" />
