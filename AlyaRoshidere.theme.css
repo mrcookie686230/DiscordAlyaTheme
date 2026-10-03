@@ -1,0 +1,352 @@
+/**
+ * @name Alya Light
+ * @description Tema pastel alb-roz in Light Mode, care devine intunecata (un pic neagra) in Dark Mode. Inspirata de KukkiHub.
+ * @author Cookie
+ * @version 1.0.0
+ */
+
+:root {
+  /* ===== SCHIMBA ASTA: link direct catre imaginea ta (https://i.imgur.com/xxxx.png) ===== */
+  --al-bg-image: url("https://i.imgur.com/JEQ88Gf.jpeg");
+}
+
+/* =====================================================
+   LIGHT MODE
+   ===================================================== */
+:root,
+.theme-light {
+  /* luminozitatea imaginii in Light Mode: 1 = originala */
+  --al-bg-brightness: 1.05;
+  --al-overlay: linear-gradient(90deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.15) 100%);
+
+  --al-ink: #f7f1f4;
+  --al-panel: rgba(255, 255, 255, 0.55);
+  --al-panel-solid: #ffffff;
+  --al-chat: rgba(255, 255, 255, 0.32);
+  --al-members: rgba(255, 255, 255, 0.40);
+  --al-input: rgba(255, 255, 255, 0.78);
+  --al-line: rgba(140, 110, 150, 0.18);
+
+  --al-text: #463d4c;
+  --al-dim: #8a7f91;
+  --al-head: #2d2532;
+  --al-accent: #c0607f;
+  --al-accent-strong: #b04a6e;
+  --al-accent-soft: rgba(192, 96, 127, 0.16);
+  --al-link: #b0507a;
+  --al-sel: rgba(120, 100, 140, 0.14);
+  --al-hover: rgba(120, 100, 140, 0.08);
+  --al-glow: 0 0 12px rgba(192, 96, 127, 0.20);
+  --al-shadow: 0 8px 24px rgba(90, 70, 110, 0.18);
+  --al-radius: 14px;
+}
+
+/* =====================================================
+   DARK MODE (un pic negru)
+   ===================================================== */
+.theme-dark,
+.theme-darker,
+.theme-midnight {
+  /* cat de intunecata e imaginea in Dark Mode: 0.4 = foarte neagra, 0.7 = usor intunecata */
+  --al-bg-brightness: 0.55;
+  --al-overlay: linear-gradient(90deg, rgba(8, 6, 10, 0.55) 0%, rgba(8, 6, 10, 0.10) 55%, rgba(8, 6, 10, 0.30) 100%);
+
+  --al-ink: #08060a;
+  --al-panel: rgba(14, 10, 17, 0.62);
+  --al-panel-solid: #15101a;
+  --al-chat: rgba(12, 9, 15, 0.38);
+  --al-members: rgba(12, 9, 15, 0.45);
+  --al-input: rgba(20, 14, 26, 0.78);
+  --al-line: rgba(255, 200, 220, 0.12);
+
+  --al-text: #f0e6ee;
+  --al-dim: #a898b0;
+  --al-head: #ffffff;
+  --al-accent: #e394b2;
+  --al-accent-strong: #d87aa0;
+  --al-accent-soft: rgba(227, 148, 178, 0.18);
+  --al-link: #f2a8c4;
+  --al-sel: rgba(255, 255, 255, 0.12);
+  --al-hover: rgba(255, 255, 255, 0.06);
+  --al-glow: 0 0 14px rgba(227, 148, 178, 0.22);
+  --al-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- variabile Discord, legate de paleta de mai sus ---------- */
+.theme-light,
+.theme-dark,
+.theme-darker,
+.theme-midnight {
+  --brand-experiment: var(--al-accent-strong);
+  --brand-500: var(--al-accent-strong);
+  --brand-560: var(--al-accent);
+  --brand-600: var(--al-accent);
+  --text-brand: var(--al-link);
+  --text-link: var(--al-link);
+  --header-primary: var(--al-head);
+  --header-secondary: var(--al-dim);
+  --text-normal: var(--al-text);
+  --text-muted: var(--al-dim);
+  --interactive-normal: var(--al-dim);
+  --interactive-hover: var(--al-head);
+  --interactive-active: var(--al-head);
+  --channels-default: var(--al-dim);
+
+  --background-primary: transparent;
+  --background-secondary: transparent;
+  --background-secondary-alt: transparent;
+  --background-tertiary: transparent;
+  --background-floating: var(--al-panel-solid);
+  --background-accent: var(--al-accent-soft);
+  --background-modifier-hover: var(--al-hover);
+  --background-modifier-selected: var(--al-sel);
+  --background-modifier-active: var(--al-sel);
+  --background-modifier-accent: var(--al-line);
+  --chat-background: transparent;
+  --channeltextarea-background: var(--al-input);
+  --scrollbar-thin-thumb: var(--al-accent);
+  --scrollbar-auto-thumb: var(--al-accent);
+  --scrollbar-auto-track: transparent;
+
+  /* variabilele mai noi */
+  --background-base-lowest: transparent;
+  --background-base-lower: transparent;
+  --background-base-low: transparent;
+  --background-surface-high: var(--al-panel-solid);
+  --chat-background-default: transparent;
+  --bg-overlay-chat: transparent;
+  --bg-overlay-1: transparent;
+  --bg-overlay-2: transparent;
+  --bg-overlay-3: transparent;
+  --bg-overlay-app-frame: transparent;
+}
+
+/* ---------- fundalul principal ---------- */
+html {
+  background: var(--al-ink) !important;
+}
+
+body,
+#app-mount,
+#app-mount > div,
+[class*="appMount"],
+[class*="app_"],
+[class*="bg__"],
+[class*="layers_"],
+[class*="layer_"]:not([class*="layerContainer"]),
+[class*="base_"],
+[class*="content_"][class*="flex"],
+[class*="appAsidePanelWrapper_"] {
+  background: transparent !important;
+}
+
+/* imaginea sta fixa in spatele intregii aplicatii */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    var(--al-overlay),
+    var(--al-bg-image) center right / cover no-repeat;
+  filter: brightness(var(--al-bg-brightness));
+}
+
+/* ---------- panouri principale ---------- */
+[class*="sidebar_"],
+[class*="sidebarList_"],
+[class*="container_"][class*="privateChannels"],
+nav[aria-label*="Servers"],
+nav[aria-label*="Servere"] {
+  background: var(--al-panel) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--al-line) !important;
+  border-radius: var(--al-radius);
+}
+
+[class*="chatContent_"] {
+  background: var(--al-chat) !important;
+  backdrop-filter: none !important;
+}
+
+[class*="membersWrap_"],
+[class*="members_"] {
+  background: var(--al-members) !important;
+}
+
+/* bara de sus */
+[class*="title_"][class*="container"],
+[class*="chat_"] > [class*="subtitleContainer_"],
+section[class*="title_"] {
+  background: transparent !important;
+  border-bottom: 1px solid var(--al-line) !important;
+  box-shadow: none !important;
+}
+
+/* ---------- canale ---------- */
+[class*="containerDefault_"] [class*="name_"],
+[class*="channel_"] [class*="name_"] {
+  transition: color 0.15s;
+}
+
+/* categoriile: majuscule, mici, estompate */
+[class*="categoryHeader"] [class*="name_"],
+[class*="containerDefault_"] > [class*="mainContent_"] [class*="name_"] {
+  color: var(--al-dim) !important;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+[class*="modeSelected_"] {
+  background: var(--al-sel) !important;
+  border-radius: 10px !important;
+}
+
+[class*="modeSelected_"] [class*="name_"] {
+  color: var(--al-head) !important;
+}
+
+[class*="modeUnread_"] [class*="name_"] {
+  color: var(--al-head) !important;
+}
+
+/* ---------- badge-uri / mentiuni ---------- */
+[class*="numberBadge_"],
+[class*="lowerBadge_"] [class*="numberBadge_"] {
+  background: var(--al-accent-strong) !important;
+  color: #fff !important;
+}
+
+[class*="unreadMentionsBar"] {
+  background: var(--al-accent-strong) !important;
+}
+
+/* ---------- lista de servere ---------- */
+[class*="listItem_"] [class*="icon_"][class*="selected"] {
+  border-radius: 50% !important;
+}
+
+[class*="pill_"] [class*="item_"] {
+  background: var(--al-accent) !important;
+}
+
+[class*="selected_"] > [class*="wrapper_"] {
+  box-shadow: 0 0 0 2px var(--al-accent), var(--al-glow);
+  border-radius: 50%;
+}
+
+/* ---------- mesaje ---------- */
+[class*="messageListItem_"] [class*="message_"]:hover {
+  background: var(--al-hover) !important;
+}
+
+[class*="username_"] {
+  font-weight: 600;
+}
+
+[class*="timestamp_"] {
+  color: var(--al-dim) !important;
+}
+
+[class*="mentioned_"] {
+  background: var(--al-accent-soft) !important;
+  box-shadow: inset 3px 0 0 var(--al-accent);
+}
+
+.mention,
+[class*="mention_"][class*="wrapper"] {
+  background: var(--al-accent-soft) !important;
+  color: var(--al-accent-strong) !important;
+  border-radius: 6px;
+}
+
+/* ---------- caseta de mesaj ---------- */
+[class*="channelTextArea_"] {
+  background: var(--al-input) !important;
+  border: 1px solid var(--al-line) !important;
+  border-radius: 18px !important;
+  backdrop-filter: blur(8px);
+}
+
+[class*="channelTextArea_"] [class*="scrollableContainer_"] {
+  background: transparent !important;
+  border-radius: 18px !important;
+}
+
+[class*="channelTextArea_"] svg {
+  color: var(--al-dim);
+}
+
+/* ---------- lista de membri ---------- */
+[class*="membersGroup_"],
+h3[class*="membersGroup_"] {
+  color: var(--al-dim) !important;
+  letter-spacing: 0.06em;
+}
+
+[class*="member_"]:hover [class*="layout_"] {
+  background: var(--al-hover) !important;
+  border-radius: 10px;
+}
+
+/* ---------- panoul user-ului din stanga jos ---------- */
+[class*="panels_"] > [class*="container_"],
+section[class*="panels_"] {
+  background: var(--al-panel) !important;
+  border: 1px solid var(--al-line);
+  border-radius: var(--al-radius);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- popouts, meniuri, modale ---------- */
+[class*="menu_"],
+[class*="popout_"],
+[class*="layer_"] [class*="container_"][class*="theme"],
+[class*="modal_"],
+[class*="tooltip_"] {
+  background: var(--al-panel-solid) !important;
+  border: 1px solid var(--al-line) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--al-shadow) !important;
+}
+
+[class*="item_"][class*="focused"],
+[class*="menu_"] [class*="focused_"] {
+  background: var(--al-accent-strong) !important;
+  color: #fff !important;
+}
+
+/* ---------- butoane ---------- */
+[class*="lookFilled_"][class*="colorBrand_"] {
+  background: var(--al-accent-strong) !important;
+  color: #fff !important;
+}
+
+[class*="lookFilled_"][class*="colorBrand_"]:hover {
+  background: var(--al-accent) !important;
+  box-shadow: var(--al-glow);
+}
+
+/* ---------- scrollbar ---------- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--al-accent);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* ---------- selectie text ---------- */
+::selection {
+  background: var(--al-accent-strong);
+  color: #fff;
+}
+
+/* ---------- accesibilitate ---------- */
+:focus-visible {
+  outline: 2px solid var(--al-accent) !important;
+  outline-offset: 2px;
+}
