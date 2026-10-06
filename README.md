@@ -1,4 +1,4 @@
-# DiscordAlyaTheme
+# Alya/MashaTheme
 # How to Install Vencord & Discord Themes
 
 Follow these simple steps to install Vencord and add custom themes to Discord.
@@ -101,8 +101,9 @@ If it doesn't appear immediately, try **Reload Themes** or restart Discord.
 
 [Vencord Download](https://vencord.dev/download/?utm_source=chatgpt.com)
 
-# Light Mode 
-<img width="1278" height="726" alt="Screenshot_20261003_204737" src="https://github.com/user-attachments/assets/5a85306b-b521-473a-acc8-c644deeb5f48" />
+# Alya Theme
+<img width="1366" height="768" alt="Alya" src="https://github.com/user-attachments/assets/8198517b-c91b-4cf4-bf60-88e55dbf41ed" />
 
-# Dark Mode
-<img width="1278" height="728" alt="Screenshot_20261003_204626-1" src="https://github.com/user-attachments/assets/b56f9ff7-e086-4832-8b7f-faf185b58a7b" />
+# Masha Theme
+<img width="1366" height="768" alt="Masha" src="https://github.com/user-attachments/assets/d47ef537-9188-4a10-ba9f-551c4bed3390" />
+
